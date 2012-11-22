@@ -11,7 +11,8 @@ func main() {
 	fmt.Println(tip(7.54))	// 1.46
 }
 
-func tip(bill float64) float64 {
-	total := math.Ceil(1.15 * bill)
-	return total - bill
+func tip(bill float64) (tip, total float64) {
+	total = math.Ceil(1.15 * bill)
+	tip = total - bill
+	return
 }
